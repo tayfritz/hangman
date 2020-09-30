@@ -14,12 +14,14 @@ words = [
 
 word_to_guess = words[random.randint(0, len(words))]
 max_guesses = len(word_to_guess)/2
-print(max_guesses)
 
-
-for letters in word_to_guess:
-    print(letters)
-
+    
 
 print("Let's play a game of hangman! ")
-user_guess = input("Type a letter to start the gane! What's your first guess?   ")
+print("You have {} guesses to guess all the letter(s) in the word I am thinking of...".format((max_guesses)))
+
+user_guess = input("Type a letter to start the game! What's your guess?   ")
+
+
+
+
