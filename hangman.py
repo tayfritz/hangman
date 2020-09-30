@@ -20,16 +20,16 @@ print("You have {} guesses to guess all the letter(s) in the word I am thinking 
 user_status = []
 
 while max_guesses > 0:
-    user_guess = input("Type a letter to play the letter or type 'QUIT' to quit the game   ")
+    user_guess = input("Type a letter to play or type 'quit' to quit the game   ")
 
-    if user_guess.upper() == "QUIT":
+    if user_guess == "quit":
         break
-    elif user_guess not in word_to_guess:
-        print("Sorry, {} is not in the word I am thinking of.")
-        max_guesses -= 1
-        print("You now have {} guesses left.")
+    elif user_guess in word_to_guess:
+        user_status.append(user_guess)
     else:
-        user.status.append(user_guess)
+        print("Sorry, {} is not in the word I am thinking of.".format(user_guess))
+        max_guesses -= 1
+        print("You now have {} guesses left.".format(max_guesses))
 
 
 
